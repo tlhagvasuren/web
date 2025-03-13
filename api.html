@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Газрын зураг – Custom Icon Marker-тай</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <script>
+
+
+    function initMap() {
+      const center = { lat: 47.914, lng: 106.920 }; // Газрын зурагны төв
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: center
+      });
+
+      // const locations = [
+      //   { position: { lat: 47.920474, lng: 106.917244 }, title: "Сүхбаатар дүүрэг - СТӨ" },
+      //   { position: { lat: 47.912319, lng: 106.891049 }, title: "Баянгол дүүрэг - 10-р хороолол" },
+      //   { position: { lat: 47.918041, lng: 106.957928 }, title: "Баянзүрх дүүрэг - Натур төв" },
+      //   { position: { lat: 47.888128, lng: 106.915838 }, title: "Хан-Уул дүүрэг - Зайсан орчим" },
+      // ];
+
+      // Custom icon URL (Flaticon-ийн зургийн URL-ийг ашиглана)
+    //   const customIcon = "https://cdn-icons-png.flaticon.com/128/447/447031.png"; // Flaticon-с авах зургийн URL
+
+    //   locations.forEach((loc) => {
+    //     new google.maps.Marker({
+    //       position: loc.position,
+    //       map: map,
+    //       title: loc.title,
+    //       icon: {
+    //         url: customIcon, 
+    //         scaledSize: new google.maps.Size(40, 40) // Icon-ийн хэмжээ
+    //       }
+    //     });
+    //   });
+    // }
+    }
+  </script>
+
+  <!-- Google Maps API Key-г энд оруулна уу -->
+  <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.179689993619!2d106.88904917625906!3d47.91231917107295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aa1b4b28d0c2e1%3A0x2b7ad7bd2439a4f5!2zMTAtcnJlbiBjaG9yb29sb2wsIPCfjeCfk-CfjOCfl-CfjeCfmCDQkdC10LvRgtGA0LDQuw!5e0!3m2!1sen!2smn!4v1710224345667!5m2!1sen!2smn"
+  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</body>
+</html>
