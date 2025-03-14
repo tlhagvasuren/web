@@ -1,58 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --primary-color: #E8F6FA;
+  --main-color1:#B9E5E8;
+  --main-color2: #7AB2D3;
+  --main-color3: #2973B2;
+  --font-color:#333;
+  --font-color2: #444;
+
+}
+.fira-sans-condensed-thin {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
 body {
-    width: 90%;
-    background-color: #f9f9f9;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    position: relative;
-}
+    display: flex;
+    justify-content: center;
+      margin: 0;
+      font-family:sans-serif;
+      line-height: 1.6;
+      color:var(--font-color);
+      position: relative;
+      width: 100%; /* Дэлгэцийн 90% өргөн */
+      background-color: var(--primary-color);
+    }
+    
    
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.navbar {
-    background-color: #fff;
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .container {
+      margin: 0 auto;
+      padding: 0 20px;
+     
+    }
+    /* section1 */
+    .container1{
+      justify-content: space-evenly;
+      align-items: center;
+      display: flex;
+      height: 60px;
   
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999; 
-}
-  
-.logo img {
-    height: 5em;
-    position: absolute;
-    left: 50px;
-    top: 10px; 
-}
-
-.menu {
-    display: flex;
-    gap: 20px;
-}
-  
-.menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-  
-.menu a:hover {
-    color: #0077cc;
-}
+    }
+    .navbar {
+      background-color: var(--main-color1);
+      padding: 30px 0;
+    
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999; /* өндөр утга тавьж header-ийг бүх зүйлийн дээр гаргана */
+    }
+    
+    
+    .logo img {
+      height: 13em;
+    }
+    
+    .menu {
+      display: flex;
+      gap: 20px;
+     
+    }
+    
+    .menu a {
+      text-decoration: none;
+      color:#0a2944;
+      transition: color 0.3s;
+      font-size: 1.1em;
+    
+    }
+    
+    .menu a:hover {
+      color:black;
+    }
 
 main {
     display: flex;
@@ -62,7 +84,7 @@ main {
     padding: 130px 20px;
 }
 
-div {
+main div {
     width: 300px;
     background-color: white;
     border-radius: 10px;
