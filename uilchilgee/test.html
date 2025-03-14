@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шүдний үйлчилгээ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h2 {
+            color: red;
+            border-bottom: 2px solid red;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .modal {
+            background: white;
+            color: black;
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Урьдчилан сэргийлэх үзлэг</h2>
+    
+    <ul>
+        <li onclick="openModal('Сүүн шүд мөнгөлөх эмчилгээ', 'Энэхүү эмчилгээ нь хүүхдийн шүдийг хамгаалахад тусална.')">Сүүн шүд мөнгөлөх эмчилгээ</li>
+        <li onclick="openModal('Урьдчилан сэргийлэх үзлэг', 'Шүдний бүх талын үзлэг, эрт илрүүлэлт хийнэ.')">Урьдчилан сэргийлэх үзлэг</li>
+        <li onclick="openModal('Шүдний өнгөр чулуу цэвэрлэх', 'Шүдний өнгөрийг эмнэлгийн аргаар цэвэрлэнэ.')">Шүдний өнгөр чулуу цэвэрлэх</li>
+        <li onclick="openModal('Фторт түрхлэг', 'Шүдийг цоорлоос хамгаалах фторт түрхлэг.')">Фторт түрхлэг</li>
+    </ul>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Гарчиг</h3>
+            <p id="modalContent">Дэлгэрэнгүй мэдээлэл энд гарна.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, content) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalContent").innerText = content;
+            document.getElementById("modalOverlay").classList.add("active");
+        }
+
+        function closeModal() {
+            document.getElementById("modalOverlay").classList.remove("active");
+        }
+    </script>
+
+</body>
+</html>

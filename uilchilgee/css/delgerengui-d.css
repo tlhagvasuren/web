@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+}
+  
+.logo img {
+    height: 5em;
+    position: absolute;
+    left: 50px;
+    top: 10px; 
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+  
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+  
+.menu a:hover {
+    color: #0077cc;
+}
+
+aside {
+    width: 30%;
+    min-width: 250px;
+    padding-top: 120px;
+    background-color: rgb(242, 242, 242);
+}
+
+main {
+    width: 70%;
+    min-width: 450px;
+    padding-top: 120px;
+    background-color: rgb(242, 242, 242);
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    aside, main {
+        width: 100%;
+    }
+}
+
+main img {
+    width: 300px;
+    height: 200px;
+}
+
+/* main ul li:hover {
+    text-decoration: dashed;
+} */
+
+ul {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+ul a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.modal-davharga {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 10000;
+}
+
+.modal-davharga.active {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    animation: scaleUp 0.2s ease-in-out forwards;
+    position: relative;
+    overflow-y: auto; /* Дотоод scrollbar үүсгэх */
+    max-height: 80vh; /* Дэлгэцийн 80%-с их өндөртэй болохгүй */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.modal h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #0077cc;
+}
+
+.modal p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+}
